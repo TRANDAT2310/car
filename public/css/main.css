@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('/bootstrap-task/__MACOSX/istockphoto-1181378245-1024x1024.jpg') repeat-y center/cover;
+}
+
+.car {  
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: url('/bootstrap-task/__MACOSX/car_2.png') no-repeat center/cover;
+    bottom: 5%;
+    left: 0%;
+}
+
+.car-top {
+    position: absolute;
+    width: 300px;
+    height: 140px;
+    background: url('/bootstrap-task/__MACOSX/car_1.png') no-repeat center/cover;
+    top: 5%;
+    left: 0%;
+}
+.car_runing{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(0,-1px, 0);
+    }
+    
+    20%, 80% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(0, -1px,0);
+    }
+
+    40%, 60% {
+        transform: translate3d(0, 1px, 0);
+    }
+}
